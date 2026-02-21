@@ -207,7 +207,6 @@ export function PlanForm() {
   const [generated, setGenerated] = useState<GeneratedPayload | null>(null);
   const [busy, setBusy] = useState(false);
 
-
   const [profilesOpen, setProfilesOpen] = useState(false);
   const [profileQuery, setProfileQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<string>("Autismo (TEA)");
@@ -257,7 +256,7 @@ export function PlanForm() {
       teacherId: TEACHER_ID,
       title,
       ageRange,
-      classSize,
+      classSize: Number(classSize),
       topic,
       inclusionProfiles: profiles,
       constraints,
